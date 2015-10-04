@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>multiscroll.js - split multi-scrolling pages plugin</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="resources/lib/jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="resources/css/examples.css" />		
+	// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="resources/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="resources/lib/vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="resources/lib/jquery.multiscroll.js"></script>
+
+	
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$('#myContainer').multiscroll({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE','#669999', '#FF4D4D', '#4DB84D', '#999966'],
+				anchors: ['first', 'second', 'third', 'four', 'five', 'six', 'end'],
+				menu: '#menu',
+				navigation: true,
+				navigationTooltips: ['About Me', 'My Autumn Afternoon', 'My Sping Morning', 'Music Notes In Art', 'Lonely Life', 'Clock', 'Abou Me'],
+				loopBottom: true,
+				loopTop: true,
+				sectionSelector: '.section',
+				leftSelector: '.left',
+				rightSelector: '.right',
+			});
+		});
+	</script>
+
+
+    <style>
+    h1{
+    	color: #fff;
+    }
+    
+	/* Fixed header and footer.
+	* --------------------------------------- */
+	#header, #footer{
+		position:fixed;
+		height: 50px;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+	
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+
+	</style>
+</head>
+<body>
+
+
+<div id="header">Charis Log. Art</div>
+<div id="footer">For any questions, send me an e-mail at: ( xarislog@gmail.com )</div>
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">Home</a></li>
+	<li data-menuanchor="end"><a href="#end">About Me</a></li>
+	<li data-menuanchor="second"></li>
+	<li data-menuanchor="third"></li>
+	<li data-menuanchor="four"></li>
+	<li data-menuanchor="five"></li>
+	<li data-menuanchor="six"></li>
+	
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<h1>“Welcome To My Art!”</h1>
+		</div>
+
+		<div class="ms-section" id="left2">
+			<img src="resources/images/01.My Autumn Afternoon.jpg">			
+		</div>
+
+		<div class="ms-section" id="left3">
+			<h1>"My Sping Morning"</h1>
+			<p>(30×40)<p>
+			<p>Oil Painting<p>
+		</div>
+
+		<div class="ms-section" id="left4">			
+			<img src="resources/images/04.Music Notes In Art.jpg">
+		</div>
+
+		<div class="ms-section" id="left5">
+			<h1>"Lonely Life"</h1>
+			<p>(30×40)<p>
+			<p>Oil Painting<p>
+		</div>
+
+		<div class="ms-section" id="left6">			
+			<img src="resources/images/06.clock.jpg">
+		</div>
+
+		<div class="ms-section" id="left7">
+			<h1>“About Me!”</h1>
+			<p>Hello!<p>
+			<p>Thank you for visiting my blog.I’m from Greece and I’m studying at the University Of Patras.
+			I’m not a professional artist,but art is one of my hobbies.I hope you like my paintings!<p>
+			<p>Enjoy!!!<p>
+		</div>
+	</div>
+	
+
+
+
+
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+		  <h1>This Is A Parallax.js Demo</h1>
+		  <p>Scroll For More<p>
+		</div>
+
+		<div class="ms-section" id="right2">
+			<h1>“My Autumn Afternoon”</h1>
+			<p>(24×30)x2 + (28×18)x1<p>
+				<p>Oil Painting<p>
+		</div>
+
+		<div class="ms-section" id="right3">			
+			<img src="resources/images/02.My Sping Morning.jpg">
+		</div>
+
+		<div class="ms-section" id="right4">
+			<h1>“Music Notes In Art”</h1>
+			<p>(20×50)<p>
+			<p>Oil Painting<p>
+		</div>
+
+		<div class="ms-section" id="right5">			
+			<img src="resources/images/05.Lonely Life.jpg">
+		</div>
+
+		<div class="ms-section" id="right6">
+			<h1>“Clock”</h1>
+			<p>(20×50)<p>
+			<p>Oil Painting<p>
+		</div>
+
+		<div class="ms-section" id="right7">
+		  <img src="resources/images/me.jpg">
+		</div>
+
+	</div>	
+
+
+
+</div>
+
+</body>
+</html>
